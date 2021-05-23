@@ -1,0 +1,6 @@
+---
+- hosts: room_assistant
+  remote_user: pi
+  gather_facts: false
+  roles:
+    - deploy_nodejs

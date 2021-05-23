@@ -1,0 +1,12 @@
+[Unit]
+Description=room-assistant service
+
+[Service]
+ExecStart=/opt/nodejs/bin/room-assistant
+WorkingDirectory=/home/pi/room-assistant
+Restart=always
+RestartSec=10
+User=pi
+
+[Install]
+WantedBy=multi-user.target

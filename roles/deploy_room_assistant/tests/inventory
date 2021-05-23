@@ -1,0 +1,9 @@
+btmonitor01 host_alias=living-room bluetooth_detection=true
+
+[room_assistant]
+btmonitor01
+
+[room_assistant:vars]
+bluetooth_mac_list:
+  - 11:11:11:11:11:11
+  - 00:00:00:00:00:00

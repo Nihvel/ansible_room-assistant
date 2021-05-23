@@ -1,0 +1,17 @@
+---
+# tasks file for deploy_nodejs
+- name: Fetch NodeJS install script
+  uri:
+    url: "{{ nodejs_url }}"
+    return_content: yes
+  register: nodejs_installer
+
+- name: Run NodeJS installer
+  shell:
+    cmd: bash
+    stdin: "{{ nodejs_installer.content }}"
+
+- name: Add NodeJS $PATH to user profile
+  lineinfile:
+    path: ~/.profile
+    line: "{{ nodejs_path }}"

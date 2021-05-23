@@ -1,0 +1,14 @@
+---
+- block:
+  - name: Get command path
+    shell:
+      cmd: "{{ item.path }}"
+    register: which_output
+
+  # ansible-galaxy collection install community.general
+  - name: Set bluetooth capabilities for {{ item.path }}
+    community.general.capabilities:
+      path: "{{ which_output.stdout }}"
+      capability: "{{ item.cap }}"
+      state: "{{ item.state }}"
+  become: true

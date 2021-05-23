@@ -1,0 +1,4 @@
+---
+# vars file for deploy_nodejs
+nodejs_url: https://gist.githubusercontent.com/mKeRix/88b7b81e9bca044f74de1dc51696efb2/raw/799a20bca44cc61d8f8ae93878f2f28af8365a69/getNodeLTS.sh
+nodejs_path: PATH="$PATH:/opt/nodejs/bin"

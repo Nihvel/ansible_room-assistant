@@ -1,0 +1,5 @@
+---
+# Use this file to store your secret variables and encrypt it using the command: `ansible-vault encrypt vault.yml`
+#mqtt_url:
+#mqtt_username:
+#mqtt_password:

@@ -1,0 +1,22 @@
+---
+# vars file for room_assistant
+room_assistant_packages:
+- build-essential
+- libavahi-compat-libdnssd-dev
+- bluetooth
+- libbluetooth-dev
+- libudev-dev
+
+bluetooth_capabilities:
+- path: eval readlink -f $(which node)
+  cap: cap_net_raw+eip
+  state: present
+- path: eval readlink -f $(which hcitool)
+  cap: cap_net_raw+eip
+  state: present
+- path: eval readlink -f $(which hciconfig)
+  cap: cap_net_admin+eip
+  state: present
+
+room_assistant_config_path: /home/pi/room-assistant/config
+systemd_path: /etc/systemd/system

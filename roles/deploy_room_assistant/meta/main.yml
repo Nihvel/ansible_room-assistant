@@ -1,0 +1,14 @@
+galaxy_info:
+  author: Juri Calleri
+  description: This role deploys the Room-Assistant application on Raspberry OS
+  company: ---
+  license: GPLv3
+  min_ansible_version: 2.9
+  platforms:
+    - name: Raspberry OS 
+  galaxy_tags:
+    - room-assistant
+    - bluetooth
+
+dependencies:
+  - deploy_nodejs

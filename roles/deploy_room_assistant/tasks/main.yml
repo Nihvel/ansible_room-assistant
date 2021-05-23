@@ -1,0 +1,18 @@
+---
+# tasks file for room_assistant
+- name: Install required packages
+  package: 
+    name: "{{ room_assistant_packages }}"
+    state: latest
+  become: true
+
+# ansible-galaxy collection install community.general
+- name: Install "room-assistant" node.js package.
+  community.general.npm:
+    name: "room-assistant"
+    global: true
+    unsafe_perm: true
+  become: true
+
+- include_tasks: bluetooth-configuration.yml
+  when: bluetooth_detection |d(false)|bool

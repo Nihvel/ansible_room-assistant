@@ -1,0 +1,8 @@
+---
+# handlers file for room_assistant
+- name: enable restart room assistant
+  systemd:
+    name: room-assistant
+    state: restarted
+    enabled: true
+  become: true

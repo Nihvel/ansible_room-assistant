@@ -1,0 +1,7 @@
+---
+- name: Setup Systemd service
+  template:
+    src: room-assistant.service.j2
+    dest: "{{ systemd_path }}/room-assistant.service"
+  become: true
+  notify: "enable restart room assistant"

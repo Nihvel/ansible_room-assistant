@@ -1,0 +1,14 @@
+global:
+  instanceName: {{ host_alias }}
+  integrations:
+    - homeAssistant
+    - bluetoothClassic
+homeAssistant:
+  mqttUrl: "{{ mqtt_url }}"
+  mqttOptions:
+    username: {{ mqtt_username }}
+    password: {{ mqtt_password }}
+bluetoothClassic:
+  interval: 15
+  preserveState: true
+  addresses: {{ bluetooth_mac_list }}

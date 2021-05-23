@@ -1,0 +1,15 @@
+---
+# defaults file for room_assistant
+
+# Place this variable in every host inside host_vars accordingly
+#bluetooth_detection: false
+
+# Place this variable in group_vars because it is common to the room_assistant inventory group
+#bluetooth_mac_list:
+#  - 00:00:00:00:00:00
+#  - 11:11:11:11:11:11
+
+# These variables are set in the ansible vault
+#mqtt_url:
+#mqtt_username:
+#mqtt_password:
